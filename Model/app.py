@@ -41,9 +41,32 @@ def preprocess_image(image):
     image = np.expand_dims(image, axis=0)  # Add batch dimension
     return image
 
+# Streamlit UI customization
+st.markdown("""
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1556740749-887f6717d7e4'); 
+            background-size: cover;
+            background-position: center center;
+            color: white;
+        }
+        .stTitle {
+            font-size: 3em;
+            font-weight: bold;
+        }
+        .stWrite {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .stImage {
+            border-radius: 10px;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 # Streamlit UI
-st.title("Flower Species Classification")
-st.write("Upload an image to get predictions:")
+st.title("🌸 Flower Species Classification 🌸")
+st.write("Upload an image to get predictions of flower species:")
 
 # Image upload widget
 uploaded_image = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
@@ -51,7 +74,7 @@ uploaded_image = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"]
 if uploaded_image is not None:
     # Open the image
     image = Image.open(uploaded_image)
-    st.image(image, caption="Uploaded Image", use_column_width=True)
+    st.image(image, caption="Uploaded Image", use_column_width=True, class_="stImage")
 
     # Preprocess the image
     processed_image = preprocess_image(image)
@@ -62,4 +85,4 @@ if uploaded_image is not None:
     predicted_class_name = class_names[str(predicted_class[0])]
 
     # Display prediction result
-    st.write(f"Predicted Class: {predicted_class_name}")
+    st.write(f"### Predicted Class: {predicted_class_name}")
