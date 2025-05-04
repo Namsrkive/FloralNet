@@ -6,7 +6,7 @@ import tensorflow as tf
 import json
 
 # Load your saved model
-model = load_model('fine_tuned_model.h5')
+model = load_model('Model/fine_tuned_model.h5')
 
 # Load class names from the provided dictionary
 class_names = {
