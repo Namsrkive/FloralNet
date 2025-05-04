@@ -42,7 +42,7 @@ def preprocess_image(image):
     return image
 
 # Streamlit UI
-st.title("Image Classification with Fine-Tuned Model")
+st.title("Flower Species Classification")
 st.write("Upload an image to get predictions:")
 
 # Image upload widget
@@ -63,4 +63,3 @@ if uploaded_image is not None:
 
     # Display prediction result
     st.write(f"Predicted Class: {predicted_class_name}")
-    st.write(f"Prediction Probability: {predictions[0][predicted_class[0]]:.4f}")
