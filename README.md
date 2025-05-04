@@ -32,3 +32,19 @@ To run this project locally:
 1. Clone the repository:
    ```bash
    git clone https://github.com/Namsrkive/Flower-Species-Classification.git
+2. Navigate to the project folder:
+   ```bash
+   cd Flower-Species-Classification
+   
+3. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+
+4. Run the Streamlit app:
+   ```bash
+   streamlit run app.py
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+   
