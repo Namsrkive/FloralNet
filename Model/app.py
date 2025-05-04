@@ -65,7 +65,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Streamlit UI
-st.title("🌸 Flower Species Classification 🌸")
+st.title("🌸 FloralNet - Flower Species Classification 🌸")
 st.write("Upload an image to get predictions of flower species:")
 
 # Image upload widget
